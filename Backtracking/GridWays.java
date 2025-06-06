@@ -5,7 +5,7 @@ public class GridWays {
     public static int gridWays(int i, int j, int n, int m) {
         if (i == n-1 && j == m-1) {
             return 1;
-        } else if(i ==n || j == m) {
+        } else if(i == n || j == m) {
             return 0;
         }
 
