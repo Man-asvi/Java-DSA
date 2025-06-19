@@ -5,21 +5,21 @@ import java.util.PriorityQueue;
 public class WeakSoldier {
 
     static class Row implements Comparable<Row> {
-         int soldiers;
-         int idx;
+        int soldiers;
+        int idx;
 
-         public Row(int soldiers, int idx) {
+        public Row(int soldiers, int idx) {
             this.soldiers = soldiers;
             this.idx = idx;
-         }
+        }
 
-         @Override
-         public int compareTo(Row r2) {
+        @Override
+        public int compareTo(Row r2) {
             if(this.soldiers == r2.soldiers) {
                 return this.idx - r2.idx;
             }
             return this.soldiers - r2.soldiers;
-         }
+        }
     }
 
     public static void main(String[] args) {
