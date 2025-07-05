@@ -39,6 +39,18 @@ public class Trie_Operations {
         return curr.eow == true;
     }
 
+    public static boolean startsWith(String prefix) {
+        Node curr = root;
+        for (int level = 0; level < prefix.length(); level++) {
+            int idx = prefix.charAt(level) - 'a';
+            if (curr.children[idx] == null) {
+                return false;
+            }
+            curr = curr.children[idx];
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         String words[] = {"the", "a", "there", "their", "any", "thee"};
 
@@ -50,6 +62,7 @@ public class Trie_Operations {
         System.out.println(search("thor"));
         System.out.println(search("any"));
         System.out.println(search("an"));
+        System.out.println(startsWith("ny"));
         
     }
     
